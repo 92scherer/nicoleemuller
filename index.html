@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolle Müller | Creator & Influencer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts femininas e elegantes: Playfair Display e Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-serif-custom {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Animação suave de fade out para a tela inicial */
+        @keyframes fadeOut {
+            from { opacity: 1; visibility: visible; }
+            to { opacity: 0; visibility: hidden; }
+        }
+        .fade-out {
+            animation: fadeOut 0.8s ease forwards;
+            animation-delay: 2s;
+        }
+        /* Efeito de brilho suave nos cards e botões */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        /* Animação flutuante sutil para os detalhes dos cantos */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-6px) scale(1.05); }
+        }
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-900 via-rose-700 to-pink-950 text-white min-h-screen flex flex-col items-center justify-start relative overflow-x-hidden selection:bg-pink-300 selection:text-pink-950">
+
+    <!-- DETALHES DELICADOS NOS CANTOS (Corações e Brilhos Suaves) -->
+    <div class="absolute top-4 left-4 text-pink-300/40 text-2xl floating-element pointer-events-none z-0">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <div class="absolute top-12 left-10 text-pink-200/30 text-sm floating-element pointer-events-none z-0" style="animation-delay: 1s;">
+        <i class="fa-solid fa-sparkles"></i>
+    </div>
+    <div class="absolute top-6 right-6 text-pink-300/40 text-3xl floating-element pointer-events-none z-0" style="animation-delay: 2s;">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <div class="absolute top-20 right-12 text-pink-200/30 text-base floating-element pointer-events-none z-0" style="animation-delay: 1.5s;">
+        <i class="fa-solid fa-sparkles"></i>
+    </div>
+    <div class="absolute bottom-8 left-8 text-pink-300/30 text-2xl floating-element pointer-events-none z-0" style="animation-delay: 2.5s;">
+        <i class="fa-solid fa-sparkles"></i>
+    </div>
+    <div class="absolute bottom-10 right-8 text-pink-300/40 text-3xl floating-element pointer-events-none z-0" style="animation-delay: 0.5s;">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+
+    <!-- TELA INICIAL (Splash Screen - 2 segundos) -->
+    <div id="splash-screen" class="fixed inset-0 bg-gradient-to-br from-pink-950 via-rose-900 to-black z-50 flex flex-col items-center justify-center p-6 text-center fade-out">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(244,114,182,0.15)_0,transparent_70%)]"></div>
+        <div class="relative z-10 space-y-4">
+            <div class="text-pink-300 text-4xl floating-element">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h1 class="font-serif-custom text-3xl sm:text-4xl font-semibold tracking-wide text-pink-100">
+                Oi, sou Nicolle Müller
+            </h1>
+            <div class="w-12 h-0.5 bg-pink-400/60 mx-auto rounded-full"></div>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL DO APLICATIVO -->
+    <main class="w-full max-w-md mx-auto px-4 py-10 flex flex-col items-center z-10 relative">
+
+        <!-- FOTO DE PERFIL -->
+        <div class="relative mb-5 group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-pink-400 to-rose-300 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
+            <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-white/80 shadow-2xl bg-rose-950 flex items-center justify-center">
+                <img src="perfil.png" alt="Nicolle Müller" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop'">
+            </div>
+        </div>
+
+        <!-- TÍTULO -->
+        <h2 class="font-serif-custom text-2xl sm:text-3xl font-bold text-center tracking-wide mb-6 text-pink-50 drop-shadow-sm">
+            Nicolle Müller <span class="block text-sm font-sans font-light tracking-widest text-pink-200 mt-1 uppercase">Creator & Influencer</span>
+        </h2>
+
+        <!-- REDES SOCIAIS (Lado a lado, tamanho menor) -->
+        <div class="flex items-center justify-center gap-4 mb-6">
+            <a href="https://www.instagram.com/nicoleemuller" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-11 h-11 rounded-full glass-card flex items-center justify-center text-white hover:text-pink-200 hover:scale-110 transition duration-300 shadow-md">
+                <i class="fa-brands fa-instagram text-xl"></i>
+            </a>
+            <a href="https://www.tiktok.com/@nicoleemuller" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-11 h-11 rounded-full glass-card flex items-center justify-center text-white hover:text-pink-200 hover:scale-110 transition duration-300 shadow-md">
+                <i class="fa-brands fa-tiktok text-xl"></i>
+            </a>
+            <a href="https://open.spotify.com/user/22kltf2nlag67crnsplge46sq?si=_NJy0LZ9QBi1ZmB_BBQnwQ&utm_source=copy-link" target="_blank" rel="noopener noreferrer" aria-label="Spotify" class="w-11 h-11 rounded-full glass-card flex items-center justify-center text-white hover:text-pink-200 hover:scale-110 transition duration-300 shadow-md">
+                <i class="fa-brands fa-spotify text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nicole-m%C3%BCller-261635bb?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-11 h-11 rounded-full glass-card flex items-center justify-center text-white hover:text-pink-200 hover:scale-110 transition duration-300 shadow-md">
+                <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
+        </div>
+
+        <!-- LINK: PUBBRIS & PARCERIAS (WHATSAPP) -->
+        <div class="w-full mb-6">
+            <a href="https://wa.me/5553991522662" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-6 rounded-2xl glass-card flex items-center justify-center gap-3 font-medium text-pink-50 hover:bg-white/25 transition-all duration-300 shadow-lg border border-pink-300/30 group">
+                <i class="fa-brands fa-whatsapp text-green-400 text-xl group-hover:scale-110 transition-transform"></i>
+                <span>Publis & Parcerias</span>
+            </a>
+        </div>
+
+        <!-- MENU: MÍDIA KIT 2026 -->
+        <div class="w-full mb-8">
+            <a href="https://nicoleemuller.my.canva.site/?fbclid=PAVERFWAVqxPBleHRuA2FlbQIxMABwZG9mAmZkaWQWUScxk-4NSMaHEQX2hXDeWxSPy74vlnNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp1JGF9yozul3Kh1KpAvQnLKFMZTmAU7Dvh4XU3KXhqa8Mqmq__6QODbs0O8W_aem_8PD-KqbKt2xkiXTHJH4-KA" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-500 hover:to-rose-400 text-white font-semibold text-center flex items-center justify-center gap-3 shadow-xl transition-all duration-300 hover:scale-[1.02] border border-pink-400/40">
+                <i class="fa-solid fa-briefcase text-lg"></i>
+                <span>Mídia Kit 2026</span>
+            </a>
+        </div>
+
+        <!-- SEÇÃO: MEUS CUPONS -->
+        <div class="w-full space-y-4">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div class="h-px bg-pink-300/30 flex-1"></div>
+                <h3 class="font-serif-custom text-xl font-semibold text-pink-100 px-2 flex items-center gap-2">
+                    <i class="fa-solid fa-tag text-pink-300 text-sm"></i> Meus Cupons
+                </h3>
+                <div class="h-px bg-pink-300/30 flex-1"></div>
+            </div>
+
+            <!-- CUPOM 1: Clea Store -->
+            <a href="https://www.cleastore.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="clea.png" alt="Clea Store" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1445205170230-053b83016050?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Clea Store</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 2: Meu Sapato Preto -->
+            <a href="https://www.meusapatopreto.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="sapato.png" alt="Meu Sapato Preto" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Meu Sapato Preto</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 3: Meu Sapato Colorido -->
+            <a href="https://www.meusapatocolorido.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="colorido.png" alt="Meu Sapato Colorido" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Meu Sapato Colorido</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICOLEEMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 4: Basic -->
+            <a href="https://www.shopbasic.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="basic.png" alt="Basic" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Basic</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICOLEMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 5: ÓR Eyewear -->
+            <a href="https://oroculos.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="or.png" alt="ÓR Eyewear" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">ÓR Eyewear</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 6: Pangéia96 -->
+            <a href="https://www.pangeia96.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="pangeia.png" alt="Pangéia96" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Pangéia96</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 7: Duás -->
+            <a href="https://www.duasacessorios.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="duas.png" alt="Duás" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Duás Acessórios</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 8: Pop Me -->
+            <a href="https://www.popme.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="pop.png" alt="Pop Me" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Pop Me</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 9: Toda Up -->
+            <a href="https://todaup.com/collections/exclusivo-fita-up?utm_source=IG+&utm_medium=Organico&utm_campaign=Embaixadoras" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="toda.png" alt="Toda Up" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Toda Up</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 10: Ollie -->
+            <a href="https://meuollie.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="ollie.png" alt="Ollie" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Ollie</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICOLEMULLER10</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+            <!-- CUPOM 11: Laçador de Ofertas -->
+            <a href="https://www.lacadordeofertas.com.br/" target="_blank" rel="noopener noreferrer" class="w-full p-3.5 rounded-2xl glass-card flex items-center justify-between gap-4 transition-all duration-300 hover:scale-[1.02] group shadow-md">
+                <div class="flex items-center gap-3.5">
+                    <img src="lacador.png" alt="Laçador de Ofertas" class="w-12 h-12 rounded-full object-cover border border-pink-300/40 bg-white/10" onerror="this.src='https://images.unsplash.com/photo-1513151233558-d860c5398176?w=100&auto=format&fit=crop'">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-pink-200/80 font-medium">Laçador de Ofertas</span>
+                        <span class="font-bold text-sm sm:text-base text-pink-50 group-hover:text-pink-200 transition-colors">NICMULLER</span>
+                    </div>
+                </div>
+                <span class="text-xs bg-white/20 px-3 py-1.5 rounded-full text-pink-100 group-hover:bg-pink-500/50 transition-colors flex items-center gap-1">
+                    Ver site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </a>
+
+        </div>
+
+        <!-- E-MAIL PARA CONTATO -->
+        <div class="mt-8 text-center">
+            <a href="mailto:nicoleemuller@junainfluencia.com" class="text-xs sm:text-sm text-pink-200 hover:text-white transition-colors flex items-center justify-center gap-2 bg-white/5 py-2 px-4 rounded-full border border-white/10">
+                <i class="fa-regular fa-envelope text-pink-300"></i>
+                <span>nicoleemuller@junainfluencia.com</span>
+            </a>
+        </div>
+
+        <!-- RODAPÉ / ASSINATURA -->
+        <footer class="mt-10 text-center pb-4">
+            <p class="text-xs text-pink-200/70 font-light">
+                desenvolvido por <a href="https://www.instagram.com/cristianscherer.dev" target="_blank" rel="noopener noreferrer" class="text-pink-200 font-medium hover:underline">Cristian Scherer</a>
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
